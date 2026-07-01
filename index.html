@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Multi Timezone Digital Clock</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Multi Timezone Digital Clock</h1>
+
+    <section class="controls">
+      <label for="tz-select">Add time zone</label>
+      <div class="add-row">
+        <input id="tz-input" list="tz-list" placeholder="Enter or select a time zone (e.g. Europe/London)" />
+        <datalist id="tz-list"></datalist>
+        <button id="add-btn">Add</button>
+      </div>
+      <p class="hint">Tip: use the browser's IANA time zone names like America/New_York, Europe/London, Asia/Tokyo. "Local" and "UTC" are supported.</p>
+    </section>
+
+    <section id="clocks" class="clocks" aria-live="polite"></section>
+
+    <footer>
+      <p>Lightweight, client-side clock. Times are computed with Intl.DateTimeFormat.</p>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
